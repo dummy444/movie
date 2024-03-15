@@ -31,14 +31,14 @@ const movieList = ref([]);
 const search_query = ref('');
 
 const handleSearch = async () => {
-  movieList.value = await fetch(`https://api.themoviedb.org/3/search/movie?query=${search_query.value}&include_adult=false&language=en-US&page=1&api_key=8aa0866155998478fa5ad874b3d218a1`)
+  movieList.value = await fetch(`https://api.themoviedb.org/3/search/movie?query=${search_query.value}&include_adult=false&language=en-US&page=1&api_key=9c3221c620b600e23ec3c070ddf20e8c`)
     .then(response => response.json())
     .then(response => response.results)
     console.log('받아온 데이타', movieList.value)
 }
 
 // const popular = async () => {
-//   movieList.value = await fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1&api_key=8aa0866155998478fa5ad874b3d218a1')
+//   movieList.value = await fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1&api_key=9c3221c620b600e23ec3c070ddf20e8c')
 //     .then(response => response.json())
 //     .then(response => response.results)
 //     console.log('받아온 데이타', movieList.value)
